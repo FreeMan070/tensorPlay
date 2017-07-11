@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 
+import IntroListItem from '../../components/IntroListItem/IntroListItem';
 
 export function IntroPage(props) {
   return (
     <div>
-      놀이페이지
+      <IntroListItem />
     </div>
   );
 }
@@ -16,12 +17,12 @@ export function IntroPage(props) {
 // Retrieve data from store as props
 function mapStateToProps(state, props) {
   return {
-    play: {},
+    play :{}
   };
 }
 
 IntroPage.propTypes = {
-  play: {}
+  play : PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps)(IntroPage);

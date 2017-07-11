@@ -15,13 +15,5 @@ const PlayReducer = (state = initialState, action) => {
   }
 };
 
-/* Selectors */
-
-// Get all Plays
-export const getPlays = state => state.plays.data;
-
-// Get play by cuid
-export const getPlay = (state, cuid) => state.plays.data.filter(post => play.cuid === cuid)[0];
-
 // Export Reducer
 export default PlayReducer;
